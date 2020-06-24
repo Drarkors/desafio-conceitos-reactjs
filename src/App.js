@@ -13,7 +13,6 @@ function App() {
   }, []);
 
   async function handleAddRepository() {
-    // TODO
     api.post('repositories',
       {
         title: `Novo repositório ${Date.now()}`,
@@ -26,7 +25,6 @@ function App() {
   }
 
   async function handleRemoveRepository(id) {
-    // TODO
     api.delete(`repositories/${id}`).then(response => {
       if (response.status !== '400') {
         const repositoryIndex = repositories.findIndex(repository => repository.id === id);
